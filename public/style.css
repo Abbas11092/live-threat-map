@@ -1,0 +1,153 @@
+
+:root {
+  --bg: #080e18;
+  --panel: #111c2b;
+  --border: #26374b;
+  --text: #e8f0fa;
+  --muted: #8da3bb;
+  --cyan: #20d9e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background: #0d1725;
+}
+
+.brand-icon {
+  color: var(--cyan);
+}
+
+.status {
+  color: var(--cyan);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #27df9a;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.filter {
+  max-width: 210px;
+  color: var(--text);
+  background: var(--panel);
+  border-color: var(--border);
+}
+
+.filter:focus {
+  background: var(--panel);
+  color: var(--text);
+}
+
+.stat-card,
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.stat-card {
+  padding: 18px;
+  min-height: 105px;
+}
+
+.stat-value {
+  margin-top: 8px;
+  color: var(--cyan);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.panel {
+  overflow: hidden;
+}
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+#map {
+  height: 570px;
+  width: 100%;
+  background: #091321;
+}
+
+.leaflet-container {
+  background: #091321;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #14243a;
+  color: white;
+}
+
+.event-feed {
+  padding: 10px;
+  max-height: 570px;
+  overflow-y: auto;
+}
+
+.event {
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.event-type {
+  display: inline-block;
+  padding: 3px 7px;
+  margin-bottom: 7px;
+  color: var(--cyan);
+  border: 1px solid #1b6774;
+  border-radius: 4px;
+  font-size: 10px;
+}
+
+.alert-warning {
+  background: #332a16;
+  border-color: #806523;
+  color: #ffe3a1;
+}
+
+@media (max-width: 768px) {
+  #map {
+    height: 420px;
+  }
+
+  .event-feed {
+    max-height: 360px;
+  }
+}
